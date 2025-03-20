@@ -4,4 +4,3 @@ beautifulsoup4
 python-dotenv
 datetime
 colorama
-

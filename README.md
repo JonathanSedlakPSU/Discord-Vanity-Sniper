@@ -38,4 +38,3 @@
 ---
 
 Enjoy using **Discord Vanity Sniper**!
-

@@ -6,9 +6,6 @@ import sys
 import subprocess
 import random
 import time
-from itertools import cycle
-from datetime import datetime
-from requests.adapters import HTTPAdapter
 
 try:
     import requests
@@ -16,6 +13,9 @@ try:
     from dotenv import dotenv_values
     from user_agent import generate_user_agent
     config = dotenv_values(".env")
+    from itertools import cycle
+    from datetime import datetime
+    from requests.adapters import HTTPAdapter
 except Exception as e:
     print(e)
 
@@ -172,10 +172,8 @@ class Sniper:
 
 
 if __name__ == "__main__":
-    # If requirements are not set via environment variable, run the batch file and exit.
     if not os.getenv('requirements'):
         subprocess.Popen(['start', 'start.bat'], shell=True)
         sys.exit()
-
     os.system('cls' if os.name == 'nt' else 'clear')
     Sniper().start()
